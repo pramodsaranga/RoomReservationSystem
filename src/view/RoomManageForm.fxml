@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="roomManageContext" prefHeight="690.0" prefWidth="1028.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RoomManageFormController">
+   <children>
+      <TableView fx:id="tblAddNewRoomDetails" layoutX="18.0" layoutY="379.0" prefHeight="297.0" prefWidth="1000.0">
+        <columns>
+          <TableColumn fx:id="colRoomId" prefWidth="187.0" text="Room Id" />
+            <TableColumn fx:id="colRoomType" prefWidth="245.0" text="Room Type" />
+            <TableColumn fx:id="colFloor" prefWidth="290.0" text="Floor" />
+            <TableColumn fx:id="colPrice" prefWidth="276.0" text="Price" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="616.0" layoutY="307.0" onAction="#addRoomOnAction" prefHeight="38.0" prefWidth="94.0" style="-fx-background-radius: 50; -fx-background-color: #1289A7;" text="Add " textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="37.0" layoutY="196.0" text="Floor   " textFill="#4b4f7c">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="116.0" text="Room Id " textFill="#4b4f7c">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="502.0" layoutY="116.0" text="Room Type " textFill="#4b4f7c">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="505.0" layoutY="196.0" text="Price   " textFill="#4b4f7c">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbRoomType" layoutX="551.0" layoutY="146.0" prefHeight="38.0" prefWidth="276.0" promptText="RoomType" style="-fx-background-color: #f1f2f6;" />
+      <JFXButton buttonType="RAISED" layoutX="747.0" layoutY="307.0" onAction="#updateOnAction" prefHeight="38.0" prefWidth="94.0" style="-fx-background-radius: 50; -fx-background-color: #ED4C67;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="888.0" layoutY="307.0" onAction="#removeOnAction" prefHeight="38.0" prefWidth="94.0" style="-fx-background-radius: 50; -fx-background-color: #e55039;" text="Remove" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtRoomId" layoutX="76.0" layoutY="146.0" prefHeight="38.0" prefWidth="251.0" promptText="Room Id" />
+      <ComboBox fx:id="cmbFloor" layoutX="76.0" layoutY="229.0" prefHeight="38.0" prefWidth="251.0" promptText="Floor" style="-fx-background-color: #f1f2f6;" />
+      <TextField fx:id="txtPrice" layoutX="548.0" layoutY="229.0" prefHeight="38.0" prefWidth="276.0" promptText="Price" />
+      <AnchorPane prefHeight="76.0" prefWidth="1028.0" style="-fx-background-color: #58B19F;">
+         <children>
+            <Label layoutX="14.0" layoutY="8.0" prefHeight="61.0" prefWidth="233.0" text="Room Manage" textFill="WHITE">
+               <font>
+                  <Font name="Baskerville Old Face" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="467.0" layoutY="29.0" text="Date : " textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="754.0" layoutY="29.0" text="Time : " textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="531.0" layoutY="28.0" prefHeight="26.0" prefWidth="127.0" text="2021-10-16" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="822.0" layoutY="26.0" prefHeight="31.0" prefWidth="107.0" text="11 : 44 : 29" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </Label>
+            <Separator layoutX="232.0" layoutY="45.0" prefHeight="2.0" prefWidth="193.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

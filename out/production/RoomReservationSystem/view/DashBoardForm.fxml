@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashBoardFormContext" prefHeight="697.0" prefWidth="1378.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <ImageView fitHeight="697.0" fitWidth="1378.0" layoutY="75.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/abc.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="-3.0" prefHeight="71.0" prefWidth="1378.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="22.0" fitWidth="25.0" layoutX="457.0" layoutY="33.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/email.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="491.0" layoutY="27.0" prefHeight="35.0" prefWidth="198.0" text="info@avenrabeach.com">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="721.0" layoutY="30.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/z6.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="760.0" layoutY="27.0" prefHeight="35.0" prefWidth="445.0" text="+94 912 277 186 / +94 912 277 187 / +94 775 288 999">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="1264.0" layoutY="25.0" onAction="#openLoginFormOnAction" prefHeight="35.0" prefWidth="96.0" style="-fx-background-color: #574b90;" text="Sign in" textFill="WHITE" />
+            <Label layoutX="89.0" layoutY="-6.0" prefHeight="47.0" prefWidth="184.0" text=" Ocean Hotel" textFill="#d35c78">
+               <font>
+                  <Font name="Blackadder ITC" size="37.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="8.0" prefHeight="30.0" prefWidth="93.0" text="Blue " textFill="#62c9ee">
+               <font>
+                  <Font name="Blackadder ITC" size="37.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Label layoutX="778.0" layoutY="224.0" prefHeight="26.0" prefWidth="224.0" text="W E L C O M E   TO " textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="628.0" layoutY="513.0" prefHeight="26.0" prefWidth="577.0" text="spend  your  worthy  leisure  time  be  comfort" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="591.0" layoutY="327.0" prefHeight="112.0" prefWidth="583.0" text="BLUE  OCEAN  HOTEL" textFill="WHITE">
+         <font>
+            <Font name="Baskerville Old Face" size="52.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

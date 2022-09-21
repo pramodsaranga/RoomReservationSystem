@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addNewEmployeeAnchorPaneContext" prefHeight="690.0" prefWidth="1028.0" stylesheets="@../assets/styles/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeFormController">
+    <children>
+        <AnchorPane layoutY="145.0" prefHeight="501.0" prefWidth="403.0" style="-fx-background-color: white;">
+            <children>
+                <VBox layoutX="10.0" onKeyReleased="#ValidationOne" prefHeight="531.0" prefWidth="336.0">
+                    <children>
+                        <AnchorPane prefHeight="42.0" prefWidth="438.0" styleClass="textPane">
+                            <children>
+                                <TextField fx:id="txtEmployeeId" layoutX="8.0" layoutY="10.0" prefHeight="28.0" prefWidth="358.0" promptText="E-001" styleClass="textField" />
+                                <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Employee ID" />
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="20.0" top="20.0" />
+                            </VBox.margin>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="48.0" prefWidth="656.0" styleClass="textPane">
+                            <children>
+                                <TextField fx:id="txtEmployeeAddress" layoutX="13.0" layoutY="8.0" prefHeight="28.0" prefWidth="358.0" promptText="Galle" styleClass="textField" />
+                                <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Address" />
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="20.0" />
+                            </VBox.margin>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="32.0" prefWidth="440.0" styleClass="textPane">
+                            <children>
+                                <TextField fx:id="txtBirthday" layoutX="13.0" layoutY="8.0" prefHeight="28.0" prefWidth="369.0" promptText="1998-10-10" styleClass="textField" />
+                                <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Birthday" />
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="20.0" />
+                            </VBox.margin>
+                        </AnchorPane>
+                  <AnchorPane prefHeight="42.0" prefWidth="438.0" styleClass="textPane">
+                     <children>
+                        <TextField fx:id="txtPost" layoutX="13.0" layoutY="8.0" prefHeight="28.0" prefWidth="369.0" promptText="Reseptionist" styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Post" />
+                     </children>
+                  </AnchorPane>
+                      <VBox onKeyReleased="#ValidationTwo" prefHeight="189.0" prefWidth="389.0">
+                          <children>
+                              <AnchorPane prefHeight="42.0" prefWidth="438.0" styleClass="textPane">
+                                  <children>
+                                      <TextField fx:id="txtEmployeeName" layoutX="13.0" layoutY="8.0" prefHeight="28.0" prefWidth="358.0" promptText="Saranga" styleClass="textField" />
+                                      <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Name" />
+                                  </children>
+                                  <VBox.margin>
+                                      <Insets bottom="20.0" top="20.0" />
+                                  </VBox.margin>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="42.0" prefWidth="438.0" styleClass="textPane">
+                                  <children>
+                                      <TextField fx:id="txtNIC" layoutX="18.0" layoutY="24.0" prefHeight="28.0" prefWidth="358.0" promptText="98786768V" styleClass="textField" />
+                                      <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="NIC" />
+                                  </children>
+                                  <VBox.margin>
+                                      <Insets bottom="20.0" />
+                                  </VBox.margin>
+                              </AnchorPane>
+                        <AnchorPane prefHeight="42.0" prefWidth="438.0" styleClass="textPane">
+                           <children>
+                              <TextField fx:id="txtContact" layoutX="13.0" layoutY="8.0" prefHeight="28.0" prefWidth="358.0" promptText="0789786564" styleClass="textField" />
+                              <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Contact" />
+                           </children>
+                        </AnchorPane>
+                          </children>
+                      </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <TableView fx:id="tblEmployee" layoutX="405.0" layoutY="145.0" prefHeight="531.0" prefWidth="616.0">
+            <columns>
+                <TableColumn fx:id="colEmployeeId" prefWidth="107.0" text="Employee Id" />
+                <TableColumn fx:id="colEmployeeName" prefWidth="69.0" text="Name" />
+                <TableColumn fx:id="colEmployeeAddress" prefWidth="91.0" text="Address" />
+                <TableColumn fx:id="colNIC" prefWidth="93.0" text="NIC" />
+                <TableColumn fx:id="colBirthday" prefWidth="78.0" text="Birthday" />
+            <TableColumn fx:id="colContact" prefWidth="83.0" text="Contact" />
+            <TableColumn fx:id="colPost" prefWidth="93.0" text="Post" />
+            </columns>
+        </TableView>
+          <Button layoutX="431.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#onAddNewEmployee" prefHeight="38.0" prefWidth="167.0" style="-fx-background-radius: 50; -fx-background-color: #1289A7;" text="Add Employee" textFill="WHITE">
+              <font>
+                  <Font name="Arial Black" size="15.0" />
+              </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+          </Button>
+          <Button layoutX="616.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#onModifyEmployee" prefHeight="38.0" prefWidth="167.0" style="-fx-background-radius: 50; -fx-background-color: #ED4C67;" text="Update Employee" textFill="WHITE">
+              <font>
+                  <Font name="Arial Black" size="15.0" />
+              </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+          </Button>
+          <Button layoutX="800.0" layoutY="86.0" mnemonicParsing="false" onMouseClicked="#deleteEmployee" prefHeight="38.0" prefWidth="167.0" style="-fx-background-radius: 50; -fx-background-color: #e55039;" text="Remove" textFill="WHITE">
+              <font>
+                  <Font name="Arial Black" size="15.0" />
+              </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+          </Button>
+      <AnchorPane prefHeight="76.0" prefWidth="1028.0" style="-fx-background-color: #58B19F;">
+         <children>
+            <Label layoutX="14.0" layoutY="8.0" prefHeight="61.0" prefWidth="242.0" text="Employee Manage" textFill="WHITE">
+               <font>
+                  <Font name="Baskerville Old Face" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="467.0" layoutY="29.0" text="Date : " textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="754.0" layoutY="29.0" text="Time : " textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="531.0" layoutY="28.0" prefHeight="26.0" prefWidth="127.0" text="2021-10-16" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="822.0" layoutY="26.0" prefHeight="31.0" prefWidth="107.0" text="11 : 44 : 29" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </Label>
+            <Separator layoutX="258.0" layoutY="46.0" prefHeight="2.0" prefWidth="167.0" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

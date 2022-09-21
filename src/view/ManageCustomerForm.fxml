@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="manageCustomerContext" prefHeight="690.0" prefWidth="1028.0" style="-fx-background-color: white;" stylesheets="@../assets/styles/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageCustomerFormController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="59.0" opacity="0.96" prefHeight="222.0" prefWidth="1009.0" style="-fx-background-color: white;">
+         <children>
+            <VBox layoutX="14.0" onKeyReleased="#ValidationOneKey" prefHeight="224.0" prefWidth="475.0">
+               <children>
+                  <AnchorPane prefHeight="42.0" prefWidth="438.0" styleClass="textPane">
+                     <children>
+                        <TextField fx:id="txtGuestId" layoutX="13.0" layoutY="8.0" prefHeight="28.0" prefWidth="406.0" promptText="C-000" styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Customer Id" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="48.0" prefWidth="902.0" styleClass="textPane">
+                     <children>
+                        <TextField fx:id="txtGuestAddress" layoutX="13.0" layoutY="8.0" prefHeight="28.0" prefWidth="406.0" promptText="Galle" styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Address" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="42.0" prefWidth="438.0" styleClass="textPane">
+                     <children>
+                        <TextField fx:id="txtContact" layoutX="13.0" layoutY="8.0" prefHeight="28.0" prefWidth="406.0" promptText="0789898979" styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Contact" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox layoutX="519.0" onKeyReleased="#ValidationTwoKey" prefHeight="154.0" prefWidth="464.0">
+               <children>
+                  <AnchorPane prefHeight="42.0" prefWidth="438.0" styleClass="textPane">
+                     <children>
+                        <TextField fx:id="txtGuestName" layoutX="13.0" layoutY="8.0" prefHeight="28.0" prefWidth="406.0" promptText="Saranga" styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Name" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="42.0" prefWidth="438.0" styleClass="textPane">
+                     <children>
+                        <TextField fx:id="txtNIC" layoutX="13.0" layoutY="8.0" prefHeight="28.0" prefWidth="406.0" promptText="987878789V " styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="NIC" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <JFXButton buttonType="RAISED" layoutX="513.0" layoutY="163.0" onAction="#addCustomerOnAction" prefHeight="38.0" prefWidth="137.0" style="-fx-background-radius: 50; -fx-background-color: #1289A7;" text="Add " textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="683.0" layoutY="163.0" onAction="#updateCustomerOnAction" prefHeight="38.0" prefWidth="137.0" style="-fx-background-radius: 50; -fx-background-color: #ED4C67;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="838.0" layoutY="163.0" onAction="#removeCustomerOnAction" prefHeight="38.0" prefWidth="137.0" style="-fx-background-radius: 50; -fx-background-color: #e55039;" text="Remove" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblGuest" layoutY="272.0" prefHeight="415.0" prefWidth="1028.0">
+        <columns>
+          <TableColumn fx:id="colGuestId" prefWidth="259.9999694824219" text="Customer ID" />
+          <TableColumn fx:id="colGuestName" prefWidth="340.0" text="Name" />
+            <TableColumn fx:id="colGuestAddress" prefWidth="99.0" text="Address" />
+            <TableColumn fx:id="colNIC" prefWidth="178.0" text="NIC" />
+            <TableColumn fx:id="colContact" prefWidth="181.0" text="Contact" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="-1.0" prefHeight="59.0" prefWidth="1028.0" style="-fx-background-color: #58B19F;">
+         <children>
+            <Label layoutX="14.0" layoutY="4.0" prefHeight="48.0" prefWidth="246.0" text="Manage Customer" textFill="WHITE">
+               <font>
+                  <Font name="Baskerville Old Face" size="32.0" />
+               </font>
+            </Label>
+            <Separator layoutX="336.0" layoutY="28.0" prefHeight="2.0" prefWidth="193.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

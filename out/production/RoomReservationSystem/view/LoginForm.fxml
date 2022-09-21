@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginContext" prefHeight="697.0" prefWidth="1378.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="697.0" fitWidth="1378.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/Z.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="492.0" layoutY="65.0" prefHeight="567.0" prefWidth="438.0" style="-fx-background-color: white; -fx-background-radius: 50;">
+         <children>
+            <TextField fx:id="txtUserName" layoutX="89.0" layoutY="141.0" prefHeight="38.0" prefWidth="288.0" promptText="UserName" />
+            <PasswordField fx:id="txtPassword" layoutX="89.0" layoutY="233.0" prefHeight="38.0" prefWidth="288.0" promptText="Password" />
+            <Label layoutX="32.0" layoutY="109.0" text="Username">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="194.0" text="Password">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="23.0" text="Login">
+               <font>
+                  <Font name="Arial Black" size="37.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="103.0" layoutY="362.0" onAction="#openAdminFormOnAction" prefHeight="38.0" prefWidth="236.0" style="-fx-background-color: #3498db; -fx-background-radius: 50;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton buttonType="RAISED" layoutX="27.0" layoutY="27.0" onAction="#backToHomeOnAction" prefHeight="38.0" prefWidth="99.0" style="-fx-background-radius: 50; -fx-background-color: #e74c3c;" text="Back" textFill="WHITE" />
+   </children>
+</AnchorPane>

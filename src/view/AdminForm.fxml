@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminContext" prefHeight="697.0" prefWidth="1378.0" style="-fx-background-color: #40407a;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminFormController">
+   <children>
+      <AnchorPane layoutY="192.0" prefHeight="505.0" prefWidth="320.0" style="-fx-background-color: #3498db;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="144.0" onAction="#EmployeeManageOnAction" prefHeight="41.0" prefWidth="234.0" style="-fx-background-color: white; -fx-background-radius: 50;" text=" Employee Manage" textFill="#2d3e82">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="35.0" layoutY="226.0" onAction="#IncomeReportOnAction" prefHeight="41.0" prefWidth="234.0" style="-fx-background-color: white; -fx-background-radius: 50;" text="Income Report" textFill="#2d3e82">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="51.0" onAction="#RoomManageOnAction" prefHeight="41.0" prefWidth="234.0" style="-fx-background-color: white; -fx-background-radius: 50;" text="Room Manage" textFill="#2d3e82">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="100.0" layoutY="372.0" onAction="#LogoutOnAction" prefHeight="41.0" prefWidth="105.0" style="-fx-background-color: #B53471; -fx-background-radius: 50;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children></AnchorPane>
+      <AnchorPane fx:id="lodeContext" layoutX="320.0" prefHeight="690.0" prefWidth="1062.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="697.0" fitWidth="1068.0" layoutX="-6.0" layoutY="-1.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/ty499.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="29.0" layoutY="133.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/icons8-user-64.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="114.0" layoutY="142.0" prefHeight="31.0" prefWidth="165.0" text="Administrator" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="21.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="3.0" layoutY="2.0" prefHeight="120.0" prefWidth="309.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="82.0" layoutY="-7.0" prefHeight="76.0" prefWidth="222.0" text=" Ocean Hotel" textFill="#d35c78">
+               <font>
+                  <Font name="Blackadder ITC" size="45.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="16.0" prefHeight="30.0" prefWidth="93.0" text="Blue " textFill="#62c9ee">
+               <font>
+                  <Font name="Blackadder ITC" size="45.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
